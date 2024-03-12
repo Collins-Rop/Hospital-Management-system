@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule Appointment</title>
+</head>
+<body>
+  <h1>Schedule Appointment</h1>
+  <form action="/schedule-appointment" method="post">
+    <label for="patient">Patient:</label>
+    <select name="patient" required>
+      <% patients.forEach(patient => { %>
+        <option value="<%= patient._id %>"><%= patient.name %></option>
+      <% }); %>
+    </select>
+
+    <label for="doctor">Doctor:</label>
+    <select name="doctor" required>
+      <% doctors.forEach(doctor => { %>
+        <option value="<%= doctor._id %>"><%= doctor.name %></option>
+      <% }); %>
+    </select>
+
+    <label for="date">Date:</label>
+    <input type="date" name="date" required>
+
+    <label for="time">Time:</label>
+    <input type="time" name="time" required>
+
+    <button type="submit">Schedule</button>
+  </form>
+</body>
+</html>
