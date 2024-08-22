@@ -6,7 +6,7 @@
     "scripts": {
         "start": "app.js"
     },
-    "author": "Your Name",
+    "author": "Collins Rop",
     "license": "MIT",
     "files": [
         "public/**",
